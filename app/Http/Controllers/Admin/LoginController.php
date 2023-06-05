@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+// use App\Helpers\CustomHelpers;
 
 class LoginController extends Controller
 {
@@ -13,6 +14,7 @@ class LoginController extends Controller
     }
 
     public function login(Request $request){
+
         $request->validate([
             "username" => ['required'],
             "password" => ['required']
@@ -21,7 +23,6 @@ class LoginController extends Controller
             "password.required" => 'Please enter Password!',
         ]);
         if(Auth::guard('admin')->attempt(['username' => $request->username, 'password' => $request->password])){
-            // dd(Auth::guard('admin')->user()->name);
             $request->session()->regenerate();
             return redirect()->route('admin.dashboard');
         }else{
