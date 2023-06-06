@@ -37,11 +37,11 @@
              </a>
            </li>
            <li class="dropdown-divider"></li>
-           <a href="{{ url('superadmin/profile') }}"><li class="dropdown-item"><i class="icon-user mr-2"></i> Profile</li></a>
+           <a href="{{ url('admin/profile') }}"><li class="dropdown-item"><i class="icon-user mr-2"></i> Profile</li></a>
            <li class="dropdown-divider"></li>
            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
            <li class="dropdown-divider"></li>
-           <a href="{{ url('superadmin/settings') }}"><li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li></a>
+           <a href="{{ url('admin/settings') }}"><li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li></a>
            <li class="dropdown-divider"></li>
            <a href="{{ route('admin.logout') }}"> <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li></a>
          </ul>

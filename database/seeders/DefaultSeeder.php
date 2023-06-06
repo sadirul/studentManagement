@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Admin\Admin;
+use App\Models\Admin\AdminModel;
 
 class DefaultSeeder extends Seeder
 {
@@ -26,6 +26,6 @@ class DefaultSeeder extends Seeder
 
         ];
 
-        Admin::create($data);
+        AdminModel::create($data);
     }
 }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 // ADMIN IMPORTS
 use App\Http\Controllers\Admin\LoginController as AdminLoginController;
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminSettingsController;
 
 
 // END ADMIN IMPORTS
@@ -40,9 +41,9 @@ Route::prefix('admin')->group(function () {
     // ADMIN LOGOUT
     Route::get('logout', [AdminDashboardController::class, 'logout'])->name('admin.logout');
 
-    // Route::get('/', function () {
-    //     return view('welcome');
-    // });
+    //settings route
+    Route::get('settings', [AdminSettingsController::class, 'index'])->name('admin.logout');
+
 });
 
 
